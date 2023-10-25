@@ -110,4 +110,38 @@ public class LL {
             this.size--;
         }
     }
+
+    public void reverse(int low, int high) {
+        Node temp = this.head;
+        Node start = null;
+        Node end = null;
+        int count = 1;
+        Node prevOfStart = null;
+        Node nextOfEnd = null;
+        while (count <= high) {
+
+            if (count <= low) {
+                prevOfStart = start;
+                start = temp;
+            }
+            end = temp;
+            nextOfEnd = temp.next;
+            count++;
+            temp = temp.next;
+        }
+        Node pre = prevOfStart;
+        Node cur = start;
+        Node t = null;
+        while (cur != nextOfEnd) {
+            t = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = t;
+        }
+
+        prevOfStart.next = pre;
+        pre.next = nextOfEnd;
+
+        display();
+    }
 }

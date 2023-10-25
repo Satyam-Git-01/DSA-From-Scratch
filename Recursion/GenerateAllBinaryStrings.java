@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class GenerateAllBinaryStrings {
     public static void main(String[] args) {
         int n = 3;
-        ArrayList<String> ans = new ArrayList<>();
+        // ArrayList<String> ans = new ArrayList<>();
         ArrayList<String> ans1 = new ArrayList<>();
-        char arr[] = new char[n];
+        // char arr[] = new char[n];
         // Generate(n, 0, arr, ans);
         // System.out.println(ans);
 
@@ -19,9 +19,9 @@ public class GenerateAllBinaryStrings {
         if (index == n) {
 
             // can use StringBuilder,StringBuffer instead of char array
-            String str=String.valueOf(arr);
-            for(int i=0;i<=arr.length-2;i++){
-                if(arr[i]=='1' && arr[i+1]=='1'){
+            String str = String.valueOf(arr);
+            for (int i = 0; i <= arr.length - 2; i++) {
+                if (arr[i] == '1' && arr[i + 1] == '1') {
                     return;
                 }
             }
@@ -34,15 +34,14 @@ public class GenerateAllBinaryStrings {
         Generate(n, index + 1, arr, ans);
     }
 
-    private static void GenerateOnlyWithoutConsecutiveOnes(int n,String str, ArrayList<String> ans){
-        if(str.length()==n){
+    private static void GenerateOnlyWithoutConsecutiveOnes(int n, String str, ArrayList<String> ans) {
+        if (str.length() == n) {
             ans.add(str);
             return;
         }
-        GenerateOnlyWithoutConsecutiveOnes(n, str+'0', ans);
-        if(str.isEmpty() || str.charAt(str.length()-1)!='1')
-        {
-            GenerateOnlyWithoutConsecutiveOnes(n, str+'1', ans);
+        GenerateOnlyWithoutConsecutiveOnes(n, str + '0', ans);
+        if (str.isEmpty() || str.charAt(str.length() - 1) != '1') {
+            GenerateOnlyWithoutConsecutiveOnes(n, str + '1', ans);
         }
     }
 }

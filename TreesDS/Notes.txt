@@ -1,0 +1,52 @@
+Tree -> It is a hierarchical (non-linear) Data Structure. It does not store data in sequential manner.
+        A tree is a connected graph without any cycle.
+Applications- 1. File System of PC 
+              2. Database Indexing
+              3. Chess Game (Multiple options from same position)
+              4. DOM Tree
+              5. Compiler Design
+
+Benefits -    1. Efficeint Data Retrieval BST/AVL Tree
+              2. Maintain Soretd Data O(logn) BST 
+              3. Can be used in Sorting Algo HeapSort, TreeSort -O(nlogn)
+
+DrawBacks-    1. Implementation is difficult
+              2. Every Node has address of child so not very memory efficent.
+              3. Searching is not efficent if it is skewed towards one side.
+
+
+Terms -------
+1. Root/Key - It is a head node of Tree. One that doesn't have any parent node.
+2. Childnode- a node that is descendant of any node.
+3. Parent- a node that is ascendant of its childnode.
+4. Siblings- nodes which have same parent.
+5. Leafs- nodes which do not have any childrens. Bottom most node of Tree. AKA External Nodes.
+6. Internal Nodes- Nodes which has atleast one child.
+7. SubTree- A smaller-tree that can be visulised in a parent tree.
+8. Height of Node- Number of edges from that node to leaf node.
+9. Height of Tree= Height of Root Node.
+10. Depth of Node= Number of edges from root to that node.
+11. Root is at Level 0, root childrens - 1 , their childrens -2 and so on....
+12. Forest- A forest is a collection of disjoint trees. In other words,
+    it is a group of trees that are not connected to each other.
+13. Edge - A link between two nodes.
+14. Degree of Node- Total number of Childrens that a node have.
+15. Degree of Tree- Highest degree among all the nodes.
+
+
+Types-----------------
+1. Binary Tree - As name suiggest Bianry (2) A tree in which every node has at most 2 childrens.
+                 Can be either 0,1 or 2 childrens.
+
+2. Generic Tree/General/ N-ary Tree - Each node can contain multiple childrens. Each node contain a DS that consist of records
+    and list of reference to the childrens.
+
+--------------------Types of Binary Tree-------------------
+1. Full Binary Tree- A binary tree in which a node can have either 0 or 2 children only not 1.
+    in FBT if I is the number of Internal Nodes then Total No of leafs= I+1
+    total Nodes = Internal Nodes+ Leaf Nodes=> I+(I+1)=> 2I+1
+
+2. Complete Binary Tree- A binary tree in which every leaf node is at same level. A node can have 0,1 or 2 childrens.
+3. Perfect Binary Tree - A binary Tree in which every leaf node is at same level. All non-leaf node has 2 childrens.
+4. Balanced Binary Tree- A binary tree in which height of tree is max(logn) n is no. of nodes and tree is not skewed.
+5. Degenerate Binary Tree- Tree goes leftwards only. like linkedlist
