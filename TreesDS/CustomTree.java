@@ -143,4 +143,53 @@ public class CustomTree {
         }
         return ans;
     }
+
+    public int heightOfTree() {
+        return heightOfTree(root);
+    }
+
+    private int heightOfTree(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return Math.max(heightOfTree(root.left) + 1, 1 + heightOfTree(root.right));
+    }
+
+    // int count=0;
+    public int numberOfLeafNodes() {
+        return numberOfLeafNodes(root);
+    }
+
+    private int numberOfLeafNodes(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        if (root.left == null && root.right == null) {
+            return 1;
+        }
+        return numberOfLeafNodes(root.left) + numberOfLeafNodes(root.right);
+
+    }
+
+    public int numberOfNonLeafNodes() {
+        return numberOfNonLeafNodes(root);
+    }
+
+    private int numberOfNonLeafNodes(TreeNode root) {
+        if (root == null || (root.left == null && root.right == null)) {
+            return 0;
+        }
+        return numberOfNonLeafNodes(root.left) + numberOfNonLeafNodes(root.right) + 1;
+    }
+
+    public int sumOfAllNodes() {
+        return sumOfAllNodes(root);
+    }
+
+    private int sumOfAllNodes(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return root.data + sumOfAllNodes(root.left) + sumOfAllNodes(root.right);
+    }
 }

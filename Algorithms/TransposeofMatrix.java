@@ -20,7 +20,7 @@ public class TransposeofMatrix {
 
         // IN PLACE works well for n*n size only
         for(int i=0;i<col;i++){
-            for(int j=i+1;j<row;j++){
+            for(int j=i;j<row;j++){
                 int temp=arr[i][j];
                 arr[i][j]=arr[j][i];
                 arr[j][i]=temp;

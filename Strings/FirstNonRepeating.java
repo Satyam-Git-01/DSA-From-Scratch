@@ -1,6 +1,4 @@
 package Strings;
-import java.util.*;
-import java.io.*;
 public class FirstNonRepeating {
 
     public static void main(String[] args) {

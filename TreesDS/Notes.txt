@@ -7,7 +7,7 @@ Applications- 1. File System of PC
               5. Compiler Design
 
 Benefits -    1. Efficeint Data Retrieval BST/AVL Tree
-              2. Maintain Soretd Data O(logn) BST 
+              2. Maintain Sorted Data O(logn) BST 
               3. Can be used in Sorting Algo HeapSort, TreeSort -O(nlogn)
 
 DrawBacks-    1. Implementation is difficult
@@ -35,7 +35,7 @@ Terms -------
 
 
 Types-----------------
-1. Binary Tree - As name suiggest Bianry (2) A tree in which every node has at most 2 childrens.
+1. Binary Tree - As name suggest Bianry (2) A tree in which every node has at most 2 childrens.
                  Can be either 0,1 or 2 childrens.
 
 2. Generic Tree/General/ N-ary Tree - Each node can contain multiple childrens. Each node contain a DS that consist of records
@@ -48,5 +48,6 @@ Types-----------------
 
 2. Complete Binary Tree- A binary tree in which every leaf node is at same level. A node can have 0,1 or 2 childrens.
 3. Perfect Binary Tree - A binary Tree in which every leaf node is at same level. All non-leaf node has 2 childrens.
-4. Balanced Binary Tree- A binary tree in which height of tree is max(logn) n is no. of nodes and tree is not skewed.
+4. Balanced Binary Tree- A binary tree in which height of tree is max(logn), n is no. of nodes and tree is not skewed. difference in height
+                         of left and right subtree not more than one.
 5. Degenerate Binary Tree- Tree goes leftwards only. like linkedlist

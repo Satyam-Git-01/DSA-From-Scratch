@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class GenerateAllBinaryStrings {
     public static void main(String[] args) {
         int n = 3;
-        // ArrayList<String> ans = new ArrayList<>();
+        ArrayList<String> ans = new ArrayList<>();
         ArrayList<String> ans1 = new ArrayList<>();
-        // char arr[] = new char[n];
-        // Generate(n, 0, arr, ans);
-        // System.out.println(ans);
+        char arr[] = new char[n];
+        Generate(n, 0, arr, ans);
+        System.out.println(ans);
 
-        GenerateOnlyWithoutConsecutiveOnes(n, "", ans1);
-        System.out.println(ans1);
+        // GenerateOnlyWithoutConsecutiveOnes(n, "", ans1);
+        // System.out.println(ans1);
     }
 
     public static void Generate(int n, int index, char arr[], ArrayList<String> ans) {
